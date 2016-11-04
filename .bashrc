@@ -22,17 +22,26 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[0
 alias c='clear'
 alias l.='ls -d .* --color=auto'
 alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
-alias .....='cd ../../../../'
-alias .4='cd ../../../../'
+alias ..='cd ..' 
+alias ...='cd ../../../' 
+alias ....='cd ../../../../' 
+alias .....='cd ../../../../' 
+alias .4='cd ../../../../' 
 alias .5='cd ../../../../..'
 alias mkdir='mkdir -pv'
+
+# network
 alias ports='netstat -tulanp'
+
+# install, update
 alias install='apt-get install -y'
+
+# configs
 alias nocomment='grep -Ev '\''^(#|$)'\'''
+
+# fs
 alias dush='du -sh'
+alias dfh='df -h'
 
 # k8s
 alias k='kubectl'
@@ -47,5 +56,5 @@ alias wk='watch kubectl get pods'
 # cd and ls
 cdl() { cd "$@"; ls -lA; }
 
-# save & load everything immediately
+# save & load everything immediately 
 alias bashrc='vim ~/.bashrc ; source ~/.bashrc'
