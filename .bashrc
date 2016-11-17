@@ -53,6 +53,10 @@ alias kb='function _kb(){ kubectl exec -it $1 bash; };_kb'
 alias kp-a='kubectl get pods --all-namespaces'
 alias wk='watch kubectl get pods'
 
+# gcloud
+alias gcp='function _gcp(){ gcloud config set project ackee-production;gcloud container clusters get-credentials ackee-production; ksc production; }; _gcp'
+alias gci='function _gci(){ gcloud config set project infrastruktura-1307;gcloud container clusters get-credentials production; ksc infrastruktura-master; }; _gci'
+
 # cd and ls
 cdl() { cd "$@"; ls -lA; }
 
