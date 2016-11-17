@@ -3,8 +3,8 @@ root .bashrc useful aliases and coloring
 
 # Installation
 ```
-$ git clone https://github.com/bartimar/.bashrc.git
-$ cp .bashrc/.bashrc ~/.bashrc
+$ git clone https://github.com/bartimar/bashrc.git
+$ cp bashrc/.bashrc ~/.bashrc
 ```
 
 # Edit .bashrc file 
