@@ -1,6 +1,16 @@
 # .bashrc
 root .bashrc useful aliases and coloring
 
+features:
+  * k8s
+  * gcloud
+  * docker
+  * PS1
+  * fs - ls, cd, mkdir, du, df
+  * network - netstat
+  * apt-get
+  * filters - grep
+  
 # Installation
 ```
 $ git clone https://github.com/bartimar/bashrc.git
