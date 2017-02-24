@@ -45,17 +45,19 @@ alias dfh='df -h'
 
 # k8s
 alias k='kubectl'
-alias kdp='kubectl describe pod'
+alias kdp='function _kdp(){ kubectl describe pod $(kubectl get pods --selector=app=$1 --output=jsonpath={.items..metadata.name});};_kdp'
 alias kds='kubectl describe service'
 alias kdd='kubectl describe deployment'
 alias ksc='function _ksc(){ kubectl config set-context `kubectl config current-context` --namespace=$1; };_ksc'
-alias kb='function _kb(){ kubectl exec -it $1 bash; };_kb'
+alias kb='function _kb(){ kubectl exec -it $(kubectl get pods --selector=app=$1 --output=jsonpath={.items..metadata.name}) bash; };_kb'
 alias kp-a='kubectl get pods --all-namespaces'
 alias wk='watch kubectl get pods'
+alias wka='watch kubectl get pods --all-namespaces'
 
 # gcloud
 alias gcp='function _gcp(){ gcloud config set project ackee-production;gcloud container clusters get-credentials ackee-production; ksc production; }; _gcp'
 alias gci='function _gci(){ gcloud config set project infrastruktura-1307;gcloud container clusters get-credentials production; ksc infrastruktura-master; }; _gci'
+alias gct='function _gct(){ gcloud config set project tapito-2;gcloud container clusters get-credentials production; ksc production; }; _gct'
 
 # cd and ls
 cdl() { cd "$@"; ls -lA; }
