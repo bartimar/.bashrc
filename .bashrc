@@ -55,9 +55,7 @@ alias wk='watch kubectl get pods'
 alias wka='watch kubectl get pods --all-namespaces'
 
 # gcloud
-alias gcp='function _gcp(){ gcloud config set project ackee-production;gcloud container clusters get-credentials ackee-production; ksc production; }; _gcp'
-alias gci='function _gci(){ gcloud config set project infrastruktura-1307;gcloud container clusters get-credentials production; ksc infrastruktura-master; }; _gci'
-alias gct='function _gct(){ gcloud config set project tapito-2;gcloud container clusters get-credentials production; ksc production; }; _gct'
+alias gcp='function _gcp(){ gcloud config set project xxxx;gcloud container clusters get-credentials xxx; ksc production; }; _gcp'
 
 # cd and ls
 cdl() { cd "$@"; ls -lA; }
